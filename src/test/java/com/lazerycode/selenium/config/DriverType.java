@@ -25,8 +25,8 @@ public enum DriverType implements DriverSetup {
         public DesiredCapabilities getDesiredCapabilities(Proxy proxySettings) {
             DesiredCapabilities capabilities = DesiredCapabilities.firefox();
             capabilities.setCapability("marionette", true);
-            caps.setCapability("platform", "Windows 7");
-            caps.setCapability("version", "47.0");
+            capabilities.setCapability("platform", "Windows 7");
+            capabilities.setCapability("version", "47.0");
             DesiredCapabilities caps = DesiredCapabilities.firefox();
             return addProxySettings(capabilities, proxySettings);
         }
