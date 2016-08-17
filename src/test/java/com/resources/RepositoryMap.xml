@@ -134,7 +134,7 @@
             <version id="2.23">
                 <bitrate sixtyfourbit="true">
                     <filelocation>http://chromedriver.storage.googleapis.com/2.23/chromedriver_mac64.zip</filelocation>
-                    <hash>6f90f35ebf62c99602a0a7298a72dbd130ffa651</hash>
+                    <hash>6cf22a7f474695a7b02c4f8e6bbe35b2441c8eb2</hash>
                     <hashtype>sha1</hashtype>
                 </bitrate>
             </version>
