@@ -28,12 +28,12 @@ public class GoogleExampleIT extends DriverBase {
         // Enter something to search for
         element.clear();
         element.sendKeys("Cheese!");
-
-        // Now submit the form. WebDriver will find the form for us from the element
-        element.submit();
-
         // Check the title of the page
         System.out.println("Page title is: " + driver.getTitle());
+
+        // // Now submit the form. WebDriver will find the form for us from the element
+        // element.submit();
+
         //
         // // Google's search is rendered dynamically with JavaScript.
         // // Wait for the page to load, timeout after 10 seconds
