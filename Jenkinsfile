@@ -8,7 +8,7 @@ node {
     stage "Test"
     sauce('f0a6b8ad-ce30-4cba-bf9a-95afbc470a8a') {
         sauceconnect(options: '', useGeneratedTunnelIdentifier: true, verboseLogging: true) {
-            sh 'mvn verify -Dremote=true -DseleniumGridURL=http://${SAUCE_USERNAME}:${SAUCE_ACCESS_KEY}@localhost:4445/wd/hub -Dbrowser=firefox'
+            sh 'mvn verify -Dremote=true -DseleniumGridURL=http://${SAUCE_USERNAME}:${SAUCE_ACCESS_KEY}@localhost:${SELENIUM_PORT}/wd/hub -Dbrowser=firefox'
         }
     }
 }
