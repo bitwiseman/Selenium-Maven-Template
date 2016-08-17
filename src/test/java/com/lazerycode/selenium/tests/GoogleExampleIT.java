@@ -55,7 +55,7 @@ public class GoogleExampleIT extends DriverBase {
         WebDriver driver = getDriver();
 
         // And now use this to visit Google
-        driver.get("http://127.0.0.1:8080");
+        driver.get("http://192.168.1.3:8080");
         // Alternatively the same thing can be done like this
         // driver.navigate().to("http://www.google.com");
 
