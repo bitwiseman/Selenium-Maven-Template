@@ -56,7 +56,7 @@ public class GoogleExampleIT extends DriverBase {
         WebDriver driver = getDriver();
 
         // And now use this to visit Google
-        driver.get("http://www.google.com");
+        driver.get("http://localhost:8080");
 
 
         // WebDriver driver = getDriver();
@@ -76,7 +76,7 @@ public class GoogleExampleIT extends DriverBase {
         // element.submit();
         //
         // // Check the title of the page
-        // System.out.println("Page title is: " + driver.getTitle());
+        System.out.println("Page title is: " + driver.getTitle());
         //
         // // Google's search is rendered dynamically with JavaScript.
         // // Wait for the page to load, timeout after 10 seconds
