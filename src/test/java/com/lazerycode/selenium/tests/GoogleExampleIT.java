@@ -80,13 +80,13 @@ public class GoogleExampleIT extends DriverBase {
         //
         // // Google's search is rendered dynamically with JavaScript.
         // // Wait for the page to load, timeout after 10 seconds
-        // (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
-        //     public Boolean apply(WebDriver d) {
-        //         return d.getTitle().toLowerCase().startsWith("milk!");
-        //     }
-        // });
-        //
-        // // Should see: "cheese! - Google Search"
-        // System.out.println("Page title is: " + driver.getTitle());
+        (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
+            public Boolean apply(WebDriver d) {
+                return d.getTitle().toLowerCase().contains("beautifier");
+            }
+        });
+
+        // Should see: "cheese! - Google Search"
+        System.out.println("Page title is: " + driver.getTitle());
     }
 }
