@@ -46,6 +46,7 @@
         <threads>1</threads>
         <remote>false</remote>
         <seleniumGridURL/>
+        <tunnelIdentifier/>
         <platform/>
         <browserVersion/>
         <proxyEnabled>false</proxyEnabled>
@@ -132,6 +133,7 @@
                                 <screenshotDirectory>${project.build.directory}/screenshots</screenshotDirectory>
                                 <remoteDriver>${remote}</remoteDriver>
                                 <gridURL>${seleniumGridURL}</gridURL>
+                                <tunnelIdentifier>${tunnelIdentifier}</tunnelIdentifier>
                                 <desiredPlatform>${platform}</desiredPlatform>
                                 <desiredBrowserVersion>${browserVersion}</desiredBrowserVersion>
                                 <proxyEnabled>${proxyEnabled}</proxyEnabled>

@@ -74,6 +74,7 @@ public class DriverFactory {
             URL seleniumGridURL = new URL(System.getProperty("gridURL"));
             String desiredBrowserVersion = System.getProperty("desiredBrowserVersion");
             String desiredPlatform = System.getProperty("desiredPlatform");
+            String tunnelIdentifier = System.getProperty("tunnelIdentifier");
 
             if (null != desiredPlatform && !desiredPlatform.isEmpty()) {
                 desiredCapabilities.setPlatform(Platform.valueOf(desiredPlatform.toUpperCase()));
@@ -81,6 +82,10 @@ public class DriverFactory {
 
             if (null != desiredBrowserVersion && !desiredBrowserVersion.isEmpty()) {
                 desiredCapabilities.setVersion(desiredBrowserVersion);
+            }
+
+            if (null != tunnelIdentifier && !tunnelIdentifier.isEmpty()) {
+                desiredCapabilities.setCapability("tunnelIdentifier", tunnelIdentifier);
             }
 
             webdriver = new RemoteWebDriver(seleniumGridURL, desiredCapabilities);
