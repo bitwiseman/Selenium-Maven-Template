@@ -56,7 +56,7 @@ public class GoogleExampleIT extends DriverBase {
         WebDriver driver = getDriver();
 
         // And now use this to visit Google
-        driver.get("http://bitwiseman.local:8080/");
+        driver.get("http://localhost:8080/");
 
 
         // WebDriver driver = getDriver();
