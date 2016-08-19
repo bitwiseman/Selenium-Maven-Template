@@ -106,10 +106,10 @@
                     <plugin>
                         <groupId>com.lazerycode.selenium</groupId>
                         <artifactId>driver-binary-downloader-maven-plugin</artifactId>
-                        <version>DEV-SNAPSHOT</version>
+                        <version>1.0.11</version>
                         <configuration>
-                            <rootStandaloneServerDirectory>${project.basedir}/src/test/resources/selenium_standalone_binaries</rootStandaloneServerDirectory>
-                            <downloadedZipFileDirectory>${project.basedir}/src/test/resources/selenium_standalone_zips</downloadedZipFileDirectory>
+                            <rootStandaloneServerDirectory>${project.basedir}/target/selenium_standalone_binaries</rootStandaloneServerDirectory>
+                            <downloadedZipFileDirectory>${project.basedir}/target/resources/selenium_standalone_zips</downloadedZipFileDirectory>
                             <customRepositoryMap>${project.basedir}/src/test/resources/RepositoryMap.xml</customRepositoryMap>
                             <overwriteFilesThatExist>${overwrite.binaries}</overwriteFilesThatExist>
                         </configuration>
