@@ -134,20 +134,11 @@
                 </bitrate>
             </version>
         </driver>
-        <driver id="operachromium">
-            <version id="0.2.2">
-                <bitrate sixtyfourbit="true">
-                    <filelocation>https://github.com/operasoftware/operachromiumdriver/releases/download/v0.2.2/operadriver_mac64.zip</filelocation>
-                    <hash>d58a3b676dda7ede5c38e5df218e7c619495c4ed</hash>
-                    <hashtype>sha1</hashtype>
-                </bitrate>
-            </version>
-        </driver>
         <driver id="phantomjs">
             <version id="2.1.1">
                 <bitrate thirtytwobit="true" sixtyfourbit="true">
                     <filelocation>https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-macosx.zip</filelocation>
-                    <hash>662e3c761f6ccb34c86056b31ddea874273ab71b</hash>
+                    <hash>d97341ff6444cfe35879b33b18a8398e9390b514</hash>
                     <hashtype>sha1</hashtype>
                 </bitrate>
             </version>
