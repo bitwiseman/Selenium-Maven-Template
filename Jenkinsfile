@@ -1,9 +1,9 @@
 node {
     stage "Build"
     checkout scm
+    deleteDir()
 
     sh 'mvn compile'
-
 
     stage "Test"
     sauce('82f8f013-e519-486a-b1f6-84bb0c658ee1') {
