@@ -1,6 +1,7 @@
 node {
     stage "Build"
-    //deleteDir()
+    sh 'rm -rf target/failsafe-reports'
+
     checkout scm
 
     sh 'mvn compile'
@@ -10,10 +11,9 @@ node {
         sauceconnect(options: '', useGeneratedTunnelIdentifier: true, verboseLogging: true) {
             def baseCommand = 'mvn verify -Dmaven.test.failure.ignore=true -Dremote=true -DseleniumGridURL=http://${SAUCE_USERNAME}:${SAUCE_ACCESS_KEY}@localhost:${SELENIUM_PORT}/wd/hub -DtunnelIdentifier=${TUNNEL_IDENTIFIER}'
             sh baseCommand + ' -Dplatform=vista -Dbrowser=safari -DbrowserVersion=5.1'
-            junit '**/target/failsafe-reports/TEST-*.xml'
             sh baseCommand + ' -Dplatform=mavericks -Dbrowser=safari -DbrowserVersion=7.0'
 
-            // sh baseCommand + ' -Dplatform=win7 -Dbrowser=firefox -DbrowserVersion=48'
+            sh baseCommand + ' -Dplatform=win7 -Dbrowser=firefox -DbrowserVersion=48'
             // sh baseCommand + ' -Dplatform=win8 -Dbrowser=firefox -DbrowserVersion=48'
             // sh baseCommand + ' -Dplatform=win10 -Dbrowser=firefox -DbrowserVersion=48'
             //
