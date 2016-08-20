@@ -1,7 +1,7 @@
 node {
     stage "Build"
-    checkout scm
     deleteDir()
+    checkout scm
 
     sh 'mvn compile'
 
