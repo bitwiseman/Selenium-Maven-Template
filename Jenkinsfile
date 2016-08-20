@@ -21,7 +21,7 @@ node {
             sh baseCommand + ' -Dplatform=mac -Dbrowser=firefox -DbrowserVersion=46'
             sh baseCommand + ' -Dplatform=mac -Dbrowser=firefox -DbrowserVersion=45'
 
-            junit '**/target/surefire-reports/TEST-*.xml'
+            junit '**/target/failsafe-reports/TEST-*.xml'
         }
     }
 }
