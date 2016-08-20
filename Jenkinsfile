@@ -8,7 +8,7 @@ node {
     stage "Test"
     sauce('82f8f013-e519-486a-b1f6-84bb0c658ee1') {
         sauceconnect(options: '', useGeneratedTunnelIdentifier: true, verboseLogging: true) {
-            def baseCommand = 'mvn verify -Dremote=true -DseleniumGridURL=http://${SAUCE_USERNAME}:${SAUCE_ACCESS_KEY}@localhost:${SELENIUM_PORT}/wd/hub -DtunnelIdentifier=${TUNNEL_IDENTIFIER}'
+            def baseCommand = 'mvn verify -Dmaven.test.failure.ignore=true -Dremote=true -DseleniumGridURL=http://${SAUCE_USERNAME}:${SAUCE_ACCESS_KEY}@localhost:${SELENIUM_PORT}/wd/hub -DtunnelIdentifier=${TUNNEL_IDENTIFIER}'
             sh baseCommand + ' -Dplatform=vista -Dbrowser=safari -DbrowserVersion=5.1'
             sh baseCommand + ' -Dplatform=mavericks -Dbrowser=safari -DbrowserVersion=7.0'
 
@@ -20,6 +20,8 @@ node {
             sh baseCommand + ' -Dplatform=mac -Dbrowser=firefox -DbrowserVersion=47'
             sh baseCommand + ' -Dplatform=mac -Dbrowser=firefox -DbrowserVersion=46'
             sh baseCommand + ' -Dplatform=mac -Dbrowser=firefox -DbrowserVersion=45'
+
+            junit '**/target/surefire-reports/TEST-*.xml'
         }
     }
 }
