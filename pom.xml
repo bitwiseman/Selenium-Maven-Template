@@ -128,6 +128,7 @@
                         <configuration>
                             <parallel>methods</parallel>
                             <threadCount>${threads}</threadCount>
+                            <reportNameSuffix>${platform}-${browser}-${browserVersion}</reportNameSuffix>
                             <systemPropertyVariables>
                                 <browser>${browser}</browser>
                                 <screenshotDirectory>${project.build.directory}/screenshots</screenshotDirectory>
