@@ -24,6 +24,8 @@ node {
 
             archiveArtifacts '**/target/failsafe-reports/TEST-*.xml'
             junit '**/target/failsafe-reports/TEST-*.xml'
+
+            step([$class: 'SauceOnDemandTestPublisher', testDataPublishers: []])
         }
     }
 }

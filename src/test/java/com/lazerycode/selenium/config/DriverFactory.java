@@ -86,7 +86,7 @@ public class DriverFactory {
 
             if (null != tunnelIdentifier && !tunnelIdentifier.isEmpty()) {
                 desiredCapabilities.setCapability("tunnelIdentifier", tunnelIdentifier);
-                desiredCapabilities.setCapability("build", tunnelIdentifier); //System.getenv("JOB_NAME") + "__" + System.getenv("BUILD_NUMBER"));
+                desiredCapabilities.setCapability("build", System.getenv("JOB_NAME") + "__" + System.getenv("BUILD_NUMBER"));
             }
 
 
