@@ -91,6 +91,10 @@ public class DriverFactory {
 
 
             webdriver = new RemoteWebDriver(seleniumGridURL, desiredCapabilities);
+            String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s",
+            (((RemoteWebDriver) webdriver).getSessionId()).toString(), System.getenv("JENKINS_BUILD_NUMBER"));
+            System.out.println(message);
+
         } else {
             webdriver = selectedDriverType.getWebDriverObject(desiredCapabilities);
         }
